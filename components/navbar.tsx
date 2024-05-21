@@ -57,10 +57,10 @@ export const Navbar = () => {
 				<NavbarBrand as="li" className="gap-3 max-w-fit">
 					<NextLink className="flex justify-start items-center gap-1" href="/">
 						<Logo />
-						<p className="font-bold text-inherit">ACME</p>
+						<p className="font-bold text-inherit">RAFFLE</p>
 					</NextLink>
 				</NavbarBrand>
-				<ul className="hidden lg:flex gap-4 justify-start ml-2">
+				{/* <ul className="hidden lg:flex gap-4 justify-start ml-2">
 					{siteConfig.navItems.map((item) => (
 						<NavbarItem key={item.href}>
 							<NextLink
@@ -75,7 +75,7 @@ export const Navbar = () => {
 							</NextLink>
 						</NavbarItem>
 					))}
-				</ul>
+				</ul> */}
 			</NavbarContent>
 
 			<NavbarContent
@@ -83,21 +83,15 @@ export const Navbar = () => {
 				justify="end"
 			>
 				<NavbarItem className="hidden sm:flex gap-2">
-					<Link isExternal href={siteConfig.links.twitter} aria-label="Twitter">
-						<TwitterIcon className="text-default-500" />
-					</Link>
-					<Link isExternal href={siteConfig.links.discord} aria-label="Discord">
-						<DiscordIcon className="text-default-500" />
-					</Link>
 					<Link isExternal href={siteConfig.links.github} aria-label="Github">
 						<GithubIcon className="text-default-500" />
 					</Link>
 					<ThemeSwitch />
 				</NavbarItem>
-				<NavbarItem className="hidden lg:flex">{searchInput}</NavbarItem>
-				<NavbarItem className="hidden md:flex">
+				{/* <NavbarItem className="hidden lg:flex">{searchInput}</NavbarItem> */}
+				{/* <NavbarItem className="hidden md:flex">
 					<Button
-            isExternal
+						isExternal
 						as={Link}
 						className="text-sm font-normal text-default-600 bg-default-100"
 						href={siteConfig.links.sponsor}
@@ -106,7 +100,7 @@ export const Navbar = () => {
 					>
 						Sponsor
 					</Button>
-				</NavbarItem>
+				</NavbarItem> */}
 			</NavbarContent>
 
 			<NavbarContent className="sm:hidden basis-1 pl-4" justify="end">
@@ -117,7 +111,7 @@ export const Navbar = () => {
 				<NavbarMenuToggle />
 			</NavbarContent>
 
-			<NavbarMenu>
+			{/* <NavbarMenu>
 				{searchInput}
 				<div className="mx-4 mt-2 flex flex-col gap-2">
 					{siteConfig.navMenuItems.map((item, index) => (
@@ -127,8 +121,8 @@ export const Navbar = () => {
 									index === 2
 										? "primary"
 										: index === siteConfig.navMenuItems.length - 1
-										? "danger"
-										: "foreground"
+											? "danger"
+											: "foreground"
 								}
 								href="#"
 								size="lg"
@@ -138,7 +132,7 @@ export const Navbar = () => {
 						</NavbarMenuItem>
 					))}
 				</div>
-			</NavbarMenu>
+			</NavbarMenu> */}
 		</NextUINavbar>
 	);
 };
